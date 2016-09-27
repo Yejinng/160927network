@@ -37,11 +37,8 @@ public class EchoServer {
 
 			try{	
 			// 4. IOStream 받아오기
-			InputStream inputStream = socket.getInputStream();
-			OutputStream outputStream = socket.getOutputStream();
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(),"UTF-8"));
-			
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(),"UTF-8"),true);
 				while( true )	{
 				// 5.데이터읽기
