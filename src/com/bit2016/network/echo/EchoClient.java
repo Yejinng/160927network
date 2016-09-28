@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class EchoClient {
-	private static final String SERVER_IP = "192.168.0.133";
+	private static final String SERVER_IP = "192.168.1.6";
 	private static final int SERVER_PORT = 5000;
 
 	public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class EchoClient {
 			// 2
 			socket.connect(new InetSocketAddress(SERVER_IP, SERVER_PORT));
 			// 3
-
+			System.out.println("1");
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true);
 
@@ -59,5 +59,9 @@ public class EchoClient {
 		}
 
 	}
+	private static void log( String message ) { 
+		System.out.println( "[Echo Client]" + message ); 
+	} 
+
 
 }
