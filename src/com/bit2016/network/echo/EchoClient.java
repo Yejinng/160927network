@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class EchoClient {
 	private static final String SERVER_IP = "192.168.1.6";
-	private static final int SERVER_PORT = 5000;
+	private static final int SERVER_PORT = 9000;
 
 	public static void main(String[] args) {
 		Socket socket = null;
@@ -31,7 +31,6 @@ public class EchoClient {
 			while (true) {
 				System.out.print(">>");
 				String data = sc.nextLine();
-
 				if (data.equals("quit")) {
 					break;
 				}
@@ -42,7 +41,7 @@ public class EchoClient {
 		} catch (UnknownHostException ue) {
 			System.out.println("안대!");
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("여기");
 		} finally {
 			if (sc != null) {
 				sc.close();
@@ -58,9 +57,5 @@ public class EchoClient {
 		}
 
 	}
-	private static void log( String message ) { 
-		System.out.println( "[Echo Client]" + message ); 
-	} 
-
-
+	 
 }
