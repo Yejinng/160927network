@@ -24,7 +24,6 @@ public class EchoClient {
 			// 2
 			socket.connect(new InetSocketAddress(SERVER_IP, SERVER_PORT));
 			// 3
-			System.out.println("1");
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true);
 

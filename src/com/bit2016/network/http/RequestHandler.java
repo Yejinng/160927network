@@ -1,4 +1,4 @@
-package kr.ac.sungkyul.network.http;
+package com.bit2016.network.http;
 
 import java.io.IOException;
 import java.io.OutputStream;
